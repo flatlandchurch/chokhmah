@@ -6,6 +6,7 @@
   "files": [
     "dist/*"
   ],
+  "private": false,
   "license": "MIT",
   "homepage": "https://design.flatland.church",
   "author": "Flatland Church",
