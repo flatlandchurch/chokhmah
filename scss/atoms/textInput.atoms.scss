@@ -1,0 +1,37 @@
+input[type='text'],
+input[type='email'],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: 1px solid #e3e4e9;
+  outline: none;
+  background: #fafbfc;
+  -webkit-transition: border-color 0.2s ease-out;
+  -moz-transition: border-color 0.2s ease-out;
+  -ms-transition: border-color 0.2s ease-out;
+  -o-transition: border-color 0.2s ease-out;
+  transition: border-color 0.2s ease-out;
+  width: 100%;
+  font-family: $font-family;
+  color: #47546e;
+
+  &:focus {
+    border-color: #048ba8;
+    background: #fff;
+  }
+
+  &.disabled {
+    background: #e3e4e9;
+    cursor: not-allowed;
+    color: #b5bbc5;
+  }
+
+  &.no-resize {
+    resize: none;
+  }
+}

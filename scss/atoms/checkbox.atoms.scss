@@ -1,0 +1,46 @@
+input[type='radio'],
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #e3e4e9;
+  height: 16px;
+  width: 16px;
+  display: block;
+  background: #fafbfc;
+  cursor: pointer;
+  outline: 0;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+
+  &:focus,
+  &:active {
+    border-color: #048ba8;
+  }
+}
+
+input[type='radio'] {
+  border-radius: 50%;
+}
+
+.radio-control {
+  display: flex;
+  width: 100%;
+  align-items: end;
+}
+
+.radio-control > *:first-child {
+  margin-right: 8px;
+}
+
+input[type='radio']:checked {
+  border: 5px solid #333;
+
+  &:focus,
+  &:active {
+    border-color: #048ba8;
+  }
+}

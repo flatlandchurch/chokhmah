@@ -1,0 +1,27 @@
+label,
+.form-field-group-header {
+  font-size: 14px;
+  text-align: left;
+  color: #6e798d;
+  display: block;
+  margin-bottom: 8px;
+  font-family: $font-family;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+label.required::after {
+  position: relative;
+  content: '*';
+  color: #d05c53;
+}
+
+.helptext {
+  font-size: 12px;
+  font-family: $font-family;
+  margin-top: 8px;
+  display: block;
+  text-align: left;
+  color: #6e798d;
+}
+

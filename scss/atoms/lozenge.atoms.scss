@@ -1,0 +1,24 @@
+span.lozenge {
+  color: #172b4d;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+  margin: 0 5px 0 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  height: 16px;
+  max-height: 16px;
+  min-width: 12px;
+  font-family: $font-family;
+  border-radius: 4px;
+  min-height: 1em;
+  padding: 3px 7px 2px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+
+  &.white {
+    color: #fff;
+  }
+}

@@ -1,0 +1,24 @@
+.breadcrumbs {
+  display: flex;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.breadcrumb {
+  margin-right: 8px;
+
+  &::after {
+    content: '/';
+    color: #b5bbc5;
+    margin-left: 8px;
+  }
+
+  &:last-child::after {
+    content: '';
+  }
+
+  a.link {
+    font-size: 14px !important;
+  }
+}

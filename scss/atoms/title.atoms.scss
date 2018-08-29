@@ -1,0 +1,95 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family;
+}
+
+h1 {
+  font-size: 86px;
+  font-weight: 900;
+  letter-spacing: -3.5px;
+  line-height: 83px;
+}
+
+h2 {
+  font-size: 42px;
+  font-weight: 300;
+  letter-spacing: -1.75px;
+  line-height: 42px;
+}
+
+h3 {
+  font-size: 34px;
+  letter-spacing: -0.5px;
+  line-height: 34px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 30px;
+  letter-spacing: -1.25px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+h5,
+h6 {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.65px;
+  line-height: 24px;
+}
+
+.page-title {
+  margin: -15px auto 25px;
+  max-width: 950px;
+  text-align: center;
+
+  &.white {
+    color: #fff;
+  }
+}
+
+h4 > a {
+  color: #000;
+  transition: color 0.2s ease-out;
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: -1.71px;
+    line-height: 68px;
+  }
+
+  h2 {
+    font-size: 34px;
+    font-weight: 300;
+    letter-spacing: -1.4px;
+    line-height: 34px;
+  }
+
+  h3 {
+    font-size: 31px;
+    letter-spacing: -0.5px;
+    line-height: 31px;
+  }
+
+  h4 {
+    font-size: 28px;
+    letter-spacing: -1.17px;
+    line-height: 30px;
+  }
+
+  h5,
+  h6 {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: -0.6px;
+    line-height: 28px;
+  }
+}

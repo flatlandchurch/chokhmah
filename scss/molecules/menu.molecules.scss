@@ -1,0 +1,49 @@
+.menu {
+  padding: 40px 40px 80px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: calc(100vh - 50px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+
+  h6 {
+    margin-bottom: 12px;
+    margin-top: 16px;
+
+    &::after {
+      content: '';
+      height: 7px;
+      width: 30px;
+      display: block;
+      background: #acc35c;
+      position: relative;
+      margin-top: 8px;
+    }
+  }
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.menu-column {
+  min-width: 150px;
+  text-align: center;
+  margin: 150px 20px 0;
+
+  h6::after {
+    margin: 8px auto 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .menu {
+    display: block;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+}

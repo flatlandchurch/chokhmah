@@ -1,0 +1,30 @@
+.attachment-card {
+  font-family: $font-family;
+  width: 156px;
+  height: 125px;
+  padding: 16px;
+  background: #f2f3f6;
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -ms-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+  margin-right: 16px;
+  margin-top: 16px;
+
+  .attachment-card-title,
+  .attachment-card-meta {
+    font-size: 12px;
+  }
+
+  .attachment-card-meta {
+    display: flex;
+  }
+
+  .attachment-card-preview {
+    flex: 1 1 auto;
+  }
+}

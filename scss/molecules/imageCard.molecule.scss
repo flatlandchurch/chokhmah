@@ -1,0 +1,21 @@
+.image-card {
+  width: 100%;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+
+  h4 {
+    margin: 17px 0 14px !important;
+    text-align: left;
+  }
+}
+
+.image-card-meta {
+  display: flex;
+  align-items: center;
+}
+
+.image-card-details {
+  display: flex;
+  flex-direction: column;
+}
