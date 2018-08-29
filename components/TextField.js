@@ -9,6 +9,7 @@ export default class TextField extends React.Component {
   static propTypes = {
     disabled: PropTypes.bool,
     helpText: PropTypes.string,
+    initialValue: PropTypes.string,
     label: PropTypes.string.isRequired,
     noResize: PropTypes.bool,
     required: PropTypes.bool,
@@ -18,11 +19,14 @@ export default class TextField extends React.Component {
     value: PropTypes.string,
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
+    onClick: PropTypes.func,
+    onKeyDown: PropTypes.func,
   };
 
   static defaultProps = {
     disabled: false,
     helpText: '',
+    initialValue: '',
     required: false,
     noResize: false,
     rows: 3,
@@ -31,14 +35,20 @@ export default class TextField extends React.Component {
     validationIcon: null,
     onBlur: () => {},
     onChange: () => {},
+    onClick: () => {},
+    onKeyDown: () => {},
   };
 
   constructor(props) {
     super(props);
     this.state = {
       id: uuid(),
-      value: props.value,
+      value: props.initialValue,
     };
+  }
+
+  componentWillReceiveProps(props) {
+    this.setState({ value: props.value });
   }
 
   handleTextChange = (e) => {
@@ -72,6 +82,7 @@ export default class TextField extends React.Component {
                 disabled: this.props.disabled,
                 'no-resize': this.props.noResize,
               })}
+              onClick={this.props.onClick}
             /> :
             <input
               type="text"
@@ -83,6 +94,8 @@ export default class TextField extends React.Component {
               className={cx({
                 disabled: this.props.disabled,
               })}
+              onClick={this.props.onClick}
+              onKeyDown={this.props.onKeyDown}
             />
         }
         {

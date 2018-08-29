@@ -21,4 +21,16 @@ span.lozenge {
   &.white {
     color: #fff;
   }
+
+  &.removable {
+    cursor: pointer;
+  }
+}
+
+.removable::after {
+  content: '\00D7';
+  margin-left: 8px;
+  text-transform: lowercase;
+  top: -1px;
+  position: relative;
 }

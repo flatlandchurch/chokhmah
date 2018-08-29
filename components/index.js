@@ -12,6 +12,7 @@ export Link from './Link';
 export Lozenge from './Lozenge';
 export Markdown from './Markdown';
 export Menu from './Menu';
+export MultiSelect from './MultiSelect';
 export PageAttachments from './PageAttachments';
 export PageCard from './PageCard';
 export PageNavigation from './PageNavigation';
