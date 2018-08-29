@@ -1,6 +1,6 @@
 {
   "name": "@flatland/chokhmah",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A unified design system for Flatland Church's digital products. Name Chokhmah for the Hebrew term for wisdom, which was also used to describe a skilled craftsman.",
   "main": "dist/index.js",
   "files": [
@@ -11,6 +11,9 @@
   "author": "Flatland Church",
   "engine": "node >= 8.0.0",
   "scripts": {
+    "build": "webpack",
+    "clean": "rimraf dist/ && mkdir dist",
+    "prebuild": "yarn clean",
     "start": "webpack --watch --debug"
   },
   "dependencies": {
@@ -95,5 +98,6 @@
     "rules": {
       "string-quotes": "single"
     }
-  }
+  },
+  "repository": "https://github.com/flatlandchurch/chokhmah"
 }
