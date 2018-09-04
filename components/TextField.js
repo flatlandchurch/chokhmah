@@ -15,6 +15,11 @@ export default class TextField extends React.Component {
     required: PropTypes.bool,
     rows: PropTypes.number,
     textarea: PropTypes.bool,
+    type: PropTypes.oneOf([
+      'text',
+      'email',
+      'password',
+    ]),
     validationIcon: PropTypes.node,
     value: PropTypes.string,
     onBlur: PropTypes.func,
@@ -31,6 +36,7 @@ export default class TextField extends React.Component {
     noResize: false,
     rows: 3,
     textarea: false,
+    type: 'text',
     value: '',
     validationIcon: null,
     onBlur: () => {},
@@ -85,7 +91,6 @@ export default class TextField extends React.Component {
               onClick={this.props.onClick}
             /> :
             <input
-              type="text"
               id={this.state.id}
               value={this.state.value}
               disabled={this.props.disabled}
@@ -96,6 +101,7 @@ export default class TextField extends React.Component {
               })}
               onClick={this.props.onClick}
               onKeyDown={this.props.onKeyDown}
+              type={this.props.type}
             />
         }
         {
