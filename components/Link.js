@@ -22,6 +22,7 @@ const Link = (props) => (
           className={cx('link', {
             black: props.black,
           })}
+          onClick={props.onClick}
         >
           {props.data.label}
         </RouterLink>
@@ -33,11 +34,13 @@ Link.propTypes = {
   black: PropTypes.bool,
   cta: PropTypes.bool,
   data: PropTypes.object.isRequired,
+  onClick: PropTypes.func,
 };
 
 Link.defaultProps = {
   black: false,
   cta: false,
+  onClick: () => {},
 };
 
 export default Link;
