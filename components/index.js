@@ -9,6 +9,7 @@ export ImageCard from './ImageCard';
 export ImageStack from './ImageStack';
 export Jumbotron from './Jumbotron';
 export Link from './Link';
+export Loading from './Loading';
 export Lozenge from './Lozenge';
 export Markdown from './Markdown';
 export Menu from './Menu';
