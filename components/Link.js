@@ -1,14 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-
-import router from '../utils/router';
-
-const handleNavigation = (url, cb) => (e) => {
-  e.preventDefault();
-  router(url);
-  cb();
-};
+import { Link as RouterLink } from 'react-router-dom';
 
 const Link = (props) => (
   <React.Fragment>
@@ -24,15 +17,14 @@ const Link = (props) => (
         >
           {props.data.label}
         </a> :
-        <a
-          href={props.data.internalUrl}
-          onClick={handleNavigation(props.data.internalUrl, props.onClick)}
+        <RouterLink
+          to={props.data.internalUrl}
           className={cx('link', {
             black: props.black,
           })}
         >
           {props.data.label}
-        </a>
+        </RouterLink>
     }
   </React.Fragment>
 );
@@ -41,13 +33,11 @@ Link.propTypes = {
   black: PropTypes.bool,
   cta: PropTypes.bool,
   data: PropTypes.object.isRequired,
-  onClick: PropTypes.func,
 };
 
 Link.defaultProps = {
   black: false,
   cta: false,
-  onClick: () => {},
 };
 
 export default Link;
