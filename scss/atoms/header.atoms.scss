@@ -1,0 +1,118 @@
+header {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  background: #fff;
+  box-shadow: 0 -6px 22px 0 rgba(0, 0, 0, 0.4);
+  align-items: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 100;
+
+  nav {
+    display: flex;
+  }
+}
+
+.header-logo {
+  width: 196px;
+  overflow: hidden;
+  margin: 1rem auto;
+  display: block;
+  box-sizing: border-box;
+}
+
+.header-nav-item {
+  display: flex;
+  margin: 0 0.75rem;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  align-items: flex-end;
+
+  a,
+  div {
+    color: #333;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-out;
+    font-family: $font-family;
+    font-weight: 800;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      color: #048ba8;
+      outline: none;
+    }
+  }
+}
+
+.header-nav-item:focus {
+  outline: none;
+}
+
+.header-nav-item:hover > div:first-child,
+.header-nav-item:focus > div:first-child {
+  color: #048ba8;
+  outline: none;
+}
+
+.header-nav-item:hover > .hamburger span,
+.header-nav-item:focus > .hamburger span {
+  background: #048ba8;
+  outline: none;
+}
+
+.hamburger {
+  width: 14px;
+  height: 10px;
+  display: block;
+  margin-left: 4px;
+  position: relative;
+  margin-bottom: 2px;
+
+  span {
+    width: 100%;
+    display: block;
+    height: 2px;
+    background: #333;
+    margin-bottom: 2px;
+    transition: transform 0.3s ease-out;
+    opacity: 1;
+    position: relative;
+  }
+}
+
+.hamburger.open {
+  span {
+    opacity: 0;
+  }
+
+  span:first-child {
+    opacity: 1;
+    transform: rotate(-135deg);
+    top: 4px;
+  }
+
+  span:last-child {
+    opacity: 1;
+    transform: rotate(-45deg);
+    top: -4px;
+  }
+}
+
+svg#logo {
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  #logo-name {
+    display: none;
+  }
+
+  header nav {
+    display: none;
+  }
+}

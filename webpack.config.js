@@ -35,6 +35,7 @@ const config = {
         include: [
           path.resolve(__dirname, 'components'),
           path.resolve(__dirname, 'utils'),
+          path.resolve(__dirname, 'icons'),
         ],
         loader: 'babel-loader',
       },
