@@ -19,8 +19,10 @@ const Link = (props) => (
         </a> :
         <RouterLink
           to={props.data.internalUrl}
-          className={cx('link', {
+          className={cx({
             black: props.black,
+            cta: props.cta,
+            link: !props.cta,
           })}
           onClick={props.onClick}
         >
