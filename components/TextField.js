@@ -12,6 +12,7 @@ export default class TextField extends React.Component {
     initialValue: PropTypes.string,
     label: PropTypes.string.isRequired,
     noResize: PropTypes.bool,
+    placeholder: PropTypes.string,
     required: PropTypes.bool,
     rows: PropTypes.number,
     textarea: PropTypes.bool,
@@ -34,6 +35,7 @@ export default class TextField extends React.Component {
     initialValue: '',
     required: false,
     noResize: false,
+    placeholder: '',
     rows: 3,
     textarea: false,
     type: 'text',
@@ -89,6 +91,7 @@ export default class TextField extends React.Component {
                 'no-resize': this.props.noResize,
               })}
               onClick={this.props.onClick}
+              placeholder={this.props.placeholder}
             /> :
             <input
               id={this.state.id}
@@ -102,6 +105,7 @@ export default class TextField extends React.Component {
               onClick={this.props.onClick}
               onKeyDown={this.props.onKeyDown}
               type={this.props.type}
+              placeholder={this.props.placeholder}
             />
         }
         {

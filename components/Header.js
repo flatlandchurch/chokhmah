@@ -13,8 +13,9 @@ const Header = (props) => (
     <div className="spacer" />
     <nav>
       {
-        props.navItems.map((navItem) => (
-          <div className="header-nav-item">
+        props.navItems.map((navItem, idx) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <div className="header-nav-item" key={`${navItem.uri}-${idx}`}>
             {
               props.navUseLink ?
                 <Link
