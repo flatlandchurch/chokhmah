@@ -2,12 +2,13 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 import { Link } from '../components';
 
 const Menu = (props) => (
   <React.Fragment>
-    <nav className="menu menu-mobile">
+    <nav className={cx('menu menu-mobile', { fixed: props.fixed })}>
       {props.mobileNavButtons}
       {
         Object.keys(props.menuItems).map((key) => (
@@ -39,7 +40,7 @@ const Menu = (props) => (
         ))
       }
     </nav>
-    <nav className="menu menu-desktop">
+    <nav className={cx('menu menu-desktop', { fixed: props.fixed })}>
       {
         Object.keys(props.menuItems)
           .filter((key) => key !== '_')
@@ -68,12 +69,14 @@ const Menu = (props) => (
 );
 
 Menu.propTypes = {
+  fixed: PropTypes.bool,
   menuItems: PropTypes.object.isRequired,
   mobileNavButtons: PropTypes.node,
   onClick: PropTypes.func,
 };
 
 Menu.defaultProps = {
+  fixed: false,
   mobileNavButtons: null,
   onClick: () => {},
 };

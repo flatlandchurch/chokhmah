@@ -23,6 +23,13 @@
       margin-top: 8px;
     }
   }
+
+  &.fixed {
+    position: fixed;
+    width: 100%;
+    top: 72px;
+    height: calc(100vh - 72px);
+  }
 }
 
 .menu-mobile {
@@ -42,6 +49,10 @@
 @media screen and (max-width: 1024px) {
   .menu {
     display: block;
+  }
+
+  .menu-desktop {
+    display: none;
   }
 
   .menu-mobile {
