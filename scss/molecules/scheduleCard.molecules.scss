@@ -1,0 +1,31 @@
+.schedule-card {
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+
+  .action-container {
+    width: 250px;
+    margin-top: 0;
+  }
+}
+
+.schedule-card-times p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.schedule-card-end-time {
+  font-size: 16px !important;
+}
+
+@media screen and (max-width: 620px) {
+  .schedule-card {
+    display: block;
+
+    .action-container {
+      width: 100%;
+      margin-top: 8px;
+    }
+  }
+}

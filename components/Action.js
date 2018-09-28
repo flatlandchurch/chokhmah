@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Button, Link } from '../components';
+import { Link } from '../components';
 
 const Action = (props) => {
   const hasSecondaryUrl = props.data.secondaryExternalUrl || props.data.secondaryInternalUrl;
@@ -14,7 +14,7 @@ const Action = (props) => {
               href={props.data.internalUrl || props.data.externalUrl}
               data={props.data}
               cta
-              black
+              black={props.black}
             />
             <Link
               href={props.data.secondaryInternalUrl || props.data.secondaryExternalUrl}
@@ -25,14 +25,24 @@ const Action = (props) => {
               }}
             />
           </React.Fragment> :
-          <Button block context="black">{props.data.label}</Button>
+          <Link
+            href={props.data.internalUrl || props.data.externalUrl}
+            data={props.data}
+            cta
+            black={props.black}
+          />
       }
     </div>
   );
 };
 
 Action.propTypes = {
+  black: PropTypes.bool,
   data: PropTypes.object.isRequired,
+};
+
+Action.defaultProps = {
+  black: true,
 };
 
 export default Action;

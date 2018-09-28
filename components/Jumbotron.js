@@ -4,6 +4,8 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 import cx from 'classnames';
 
+import Action from './Action';
+
 const Jumbotron = (props) => (
   <div
     className={cx('jumbotron-container', {
@@ -32,17 +34,23 @@ const Jumbotron = (props) => (
         props.byline &&
           <p className="byline">{props.byline}</p>
       }
+      {
+        Boolean(Object.keys(props.action).length) &&
+          <Action data={props.action} black={false} />
+      }
     </div>
   </div>
 );
 
 Jumbotron.propTypes = {
+  action: PropTypes.object,
   byline: PropTypes.string,
   image: PropTypes.string,
   title: PropTypes.string.isRequired,
 };
 
 Jumbotron.defaultProps = {
+  action: {},
   byline: '',
   image: '',
 };

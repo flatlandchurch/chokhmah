@@ -18,7 +18,11 @@ const Link = (props) => (
           {props.data.label}
         </a> :
         <RouterLink
-          to={props.data.internalUrl}
+          to={
+            props.data.internalUrl[0] === '/' ?
+              props.data.internalUrl :
+              `/${props.data.internalUrl}`
+          }
           className={cx({
             black: props.black,
             cta: props.cta,

@@ -54,7 +54,7 @@ export default class PageNavigation extends React.Component {
           <nav className="page-navigation-items">
             {
               this.props.navItems.map((navItem) => (
-                <div className="page-navigation-item" key={navItem.label}>
+                <div className="page-navigation-item" key={`desktop-${navItem.label}`}>
                   <Link
                     data={navItem}
                     href={navItem.internalUrl || navItem.externalUrl}

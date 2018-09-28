@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-import { Lozenge, TitleLink } from '../components';
+import { Lozenge } from '../components';
 
 const ImageCard = (props) => (
   <div className="card card-elevation--1 image-card">
@@ -17,11 +17,7 @@ const ImageCard = (props) => (
     </div>
     <div className="spacer" />
     <div className="image-card-details">
-      <TitleLink
-        label={props.title}
-        internalUrl={props.internalUrl}
-        externalUrl={props.externalUrl}
-      />
+      <h4>{props.title}</h4>
       <div className="image-card-meta">
         {
           props.tag &&
@@ -48,9 +44,7 @@ const ImageCard = (props) => (
 ImageCard.propTypes = {
   alt: PropTypes.string.isRequired,
   children: PropTypes.node,
-  externalUrl: PropTypes.string,
   image: PropTypes.string.isRequired,
-  internalUrl: PropTypes.string,
   metaDetails: PropTypes.string,
   tag: PropTypes.string,
   tagColor: PropTypes.string,
@@ -60,8 +54,6 @@ ImageCard.propTypes = {
 
 ImageCard.defaultProps = {
   children: null,
-  externalUrl: '',
-  internalUrl: '',
   metaDetails: '',
   tag: '',
   tagColor: '',

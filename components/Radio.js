@@ -28,13 +28,14 @@ export default class Radio extends React.Component {
   }
 
   render() {
-    const RadioInput = ({ id, label }) => (
+    const RadioInput = ({ id, label, value }) => (
       <div className="radio-control">
         <input
           type="radio"
           id={id || this.state.id}
           name={this.props.name}
           tabIndex={0}
+          value={value}
         />
         <label htmlFor={id || this.state.id}>
           {label || this.props.label}
@@ -56,6 +57,7 @@ export default class Radio extends React.Component {
                 id={input.id}
                 key={input.id}
                 tabIndex={0}
+                value={input.value}
               />
             )) :
             <RadioInput />
