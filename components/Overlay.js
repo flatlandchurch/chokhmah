@@ -13,12 +13,18 @@ class Overlay extends React.Component {
   };
 
   componentWillMount() {
-    window.addEventListener('keydown', this.handleKeydown);
-    document.body.style.overflow = 'hidden';
+    if (window) {
+      window.addEventListener('keydown', this.handleKeydown);
+    }
+    if (document) {
+      document.body.style.overflow = 'hidden';
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keydown', this.handleKeydown);
+    if (window) {
+      window.removeEventListener('keydown', this.handleKeydown);
+    }
   }
 
   handleKeydown = (e) => {

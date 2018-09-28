@@ -24,7 +24,6 @@ export PageCard from './PageCard';
 export PageNavigation from './PageNavigation';
 export Search from './Search';
 export TextField from './TextField';
-export TitleLink from './TitleLink';
 export Radio from './Radio';
 export ScheduleCard from './ScheduleCard';
 export Stack from './Stack';
