@@ -1,6 +1,6 @@
 {
   "name": "@flatland/chokhmah",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "A unified design system for Flatland Church's digital products. Name Chokhmah for the Hebrew term for wisdom, which was also used to describe a skilled craftsman.",
   "main": "dist/index.js",
   "files": [
