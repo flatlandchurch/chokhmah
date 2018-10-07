@@ -11,6 +11,8 @@ export default class Radio extends React.Component {
     inputs: PropTypes.array,
     label: PropTypes.string,
     name: PropTypes.string.isRequired,
+    selected: PropTypes.string,
+    onChange: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
@@ -18,6 +20,7 @@ export default class Radio extends React.Component {
     groupHeader: '',
     label: '',
     inputs: [],
+    selected: '',
   };
 
   constructor(props) {
@@ -28,7 +31,13 @@ export default class Radio extends React.Component {
   }
 
   render() {
-    const RadioInput = ({ id, label, value }) => (
+    const RadioInput = ({
+      id,
+      label,
+      value,
+      onChange,
+      checked,
+    }) => (
       <div className="radio-control">
         <input
           type="radio"
@@ -36,6 +45,8 @@ export default class Radio extends React.Component {
           name={this.props.name}
           tabIndex={0}
           value={value}
+          onChange={onChange}
+          checked={checked}
         />
         <label htmlFor={id || this.state.id}>
           {label || this.props.label}
@@ -58,6 +69,8 @@ export default class Radio extends React.Component {
                 key={input.id}
                 tabIndex={0}
                 value={input.value}
+                onChange={this.props.onChange}
+                checked={this.props.selected === input.id}
               />
             )) :
             <RadioInput />

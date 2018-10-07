@@ -24,6 +24,7 @@ const Search = (props) => (
               image={result.attributes.image}
               onClick={props.onSelect(result.id)}
               key={result.id}
+              type={result.type}
             />
           ))
         }

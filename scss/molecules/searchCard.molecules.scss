@@ -13,7 +13,7 @@
   }
 
   p {
-    width: calc(100% - 100px);
+    width: 100%;
     margin: 0;
     color: rgba(0, 0, 0, 0.75);
     font-size: 21px;
@@ -38,6 +38,10 @@
     object-fit: cover;
     object-position: center center;
   }
+}
+
+.card-content {
+  width: calc(100% - 100px);
 }
 
 @media screen and (max-width: 1024px) {
